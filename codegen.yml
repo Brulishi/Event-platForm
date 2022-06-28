@@ -1,6 +1,5 @@
 schema: https://api-sa-east-1.graphcms.com/v2/cl4okwcv50b6001xtfxpw06r6/master
 
-
 documents: './src/graphql/**/*.graphql'
 
 generates:
