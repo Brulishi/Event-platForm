@@ -8,7 +8,7 @@ interface LessonProps {
   title: string;
   slug: string;
   availableAt: Date;
-  type: "live" | "class";
+  type: 'live' | 'class';
 }
 
 export function Lesson(props: LessonProps) {
@@ -20,14 +20,14 @@ export function Lesson(props: LessonProps) {
     "EEEE' • 'd' de 'MMMM' • 'k'h'mm",
     {
       locale: ptBR,
-    }
-  );
+    })
 
   const isActiveLesson = slug === props.slug;
 
   return (
     <Link to={`/event/lesson/${props.slug}`} className="group">
-      <span className="text-gray-300">{availableDateFormatted}</span>
+      <span className="text-gray-300">{availableDateFormatted}
+      </span>
 
       <div
         className={classNames(
@@ -62,7 +62,7 @@ export function Lesson(props: LessonProps) {
             className={classNames(
               "text-xs rounded py-[2px] px-2 text-white border border-green-300 font-bold",
               {
-                "border-whie": isActiveLesson,
+                "border-white": isActiveLesson,
                 "border-green-300": !isActiveLesson,
               }
             )}
